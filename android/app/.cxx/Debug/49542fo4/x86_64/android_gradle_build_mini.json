@@ -1,0 +1,20 @@
+{
+  "buildFiles": [
+    "C:\\devlopment\\flutter\\packages\\flutter_tools\\gradle\\src\\main\\groovy\\CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "C:\\Android\\cmake\\3.22.1\\bin\\ninja.exe",
+      "-C",
+      "E:\\beeapp\\codecanyon-51158324-fuzzy-ecommerce-flutter-ui-kit-template\\Fuzzy\\Fuzzy\\android\\app\\.cxx\\Debug\\49542fo4\\x86_64",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "C:\\Android\\cmake\\3.22.1\\bin\\ninja.exe",
+    "-C",
+    "E:\\beeapp\\codecanyon-51158324-fuzzy-ecommerce-flutter-ui-kit-template\\Fuzzy\\Fuzzy\\android\\app\\.cxx\\Debug\\49542fo4\\x86_64",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {}
+}

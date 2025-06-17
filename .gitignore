@@ -1,0 +1,36 @@
+# Flutter/Dart/Pub related
+.dart_tool/
+.packages
+.pub/
+build/
+pubspec.lock
+.flutter-plugins
+.flutter-plugins-dependencies
+
+# Android
+android/.gradle/
+android/app/*.keystore
+android/key.properties
+
+# iOS
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/.generated/
+
+# VS Code / IntelliJ / IDEs
+.vscode/
+.idea/
+*.iml
+
+# macOS & Linux files
+.DS_Store
+*.swp
+
+# Web build
+web/.dart_tool/
+web/build/
+
+# Windows build
+windows/Runner/GeneratedPluginRegistrant.*
