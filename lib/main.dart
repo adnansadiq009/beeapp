@@ -93,7 +93,6 @@ class MyApp extends StatelessWidget {
           }
         });
   }
-
   lockScreenPortrait() {
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
