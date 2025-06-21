@@ -11,10 +11,12 @@ class NewArrivalSubLayoutOne extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Consumer<HomeProvider>(builder: (context1, home, child) {
-      return Stack(children: [
+      return Stack(
+          children: [
         //image display in gridview //add to cart button
         CommonContainerGrid(
           imagePath: data.firstImageUrl,
+          width: 270,
           widget: CommonCartButton(
             imagePath: svgAssets.iconCart,
             onTap: () => home.moveToCart(index,
@@ -22,12 +24,16 @@ class NewArrivalSubLayoutOne extends StatelessWidget {
           ).paddingOnly(right: Insets.i9),
         ),
         //wishlist button
-        CommonWishlistButton(
-          imagePath: data.isInWishlist == true
-              ? svgAssets.iconWishlistOne
-              : svgAssets.iconWishlistTwo,
-          onTap: () => home.moveToWishlist(index,
-              home.newArrivalList as List<Map<String, dynamic>>, context),
+        Positioned(
+          top: -5,
+          right: -10,
+          child: CommonWishlistButton(
+            imagePath: data.isInWishlist == true
+                ? svgAssets.iconWishlistOne
+                : svgAssets.iconWishlistTwo,
+            onTap: () => home.moveToWishlist(index,
+                home.newArrivalList as List<Map<String, dynamic>>, context),
+          ),
         ),
         //subdata display and product click event to more product page
         NewArrivalSubLayout(

@@ -1,4 +1,5 @@
 import 'package:flutter/services.dart';
+import 'package:provider/provider.dart';
 
 import '../../config.dart';
 
@@ -67,12 +68,31 @@ class DashboardProvider with ChangeNotifier {
     }
   }
 
-  //list tap event
-  onTapList(dynamic data, BuildContext context) {
-    if (data['title'] == appFonts.pageList ||
-        data['title'] == appFonts.setting ||
-        data['title'] == appFonts.logout) {
+  // list tap event
+  // onTapList(dynamic data, BuildContext context) {
+  //   if (data['title'] == appFonts.pageList ||
+  //       data['title'] == appFonts.setting ||
+  //       data['title'] == appFonts.logout) {
+  //     route.pushNamed(context, data['route']);
+  //   }
+  // }
+
+  onTapList(dynamic data, BuildContext context) async {
+    if (data['title'] == appFonts.logout) {
+      // ✅ Call logout
+      final loginProvider = Provider.of<LoginProvider>(context, listen: false);
+      await loginProvider.logout();
+
+      // ✅ Clear navigation stack and go to login screen
+      Navigator.pushNamedAndRemoveUntil(
+        context,
+        routeName.login,
+            (Route<dynamic> route) => false,
+      );
+    } else if (data['title'] == appFonts.pageList ||
+        data['title'] == appFonts.setting) {
       route.pushNamed(context, data['route']);
     }
   }
+
 }

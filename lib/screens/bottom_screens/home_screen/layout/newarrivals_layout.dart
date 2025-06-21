@@ -9,7 +9,7 @@ class NewArrivalLayout extends StatelessWidget {
     return Consumer2<HomeProvider, ThemeService>(
         builder: (context1, home, theme, child) {
       return SizedBox(
-        height: 280, // Adjust height according to your card size
+        height: 260, // Adjust height according to your card size
         child: ListView.builder(
           scrollDirection: Axis.horizontal,
           itemCount: home.newArrivalList.length,

@@ -12,7 +12,8 @@ class NewArrivalSubLayout extends StatelessWidget {
     return Consumer<HomeProvider>(builder: (context1, home, child) {
       return Stack(children: [
         Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          VSpace(MediaQuery.of(context).size.height * 0.21),
+          // VSpace(MediaQuery.of(context).size.height * 0.21),
+          VSpace(170),
           //text layout
 
           SizedBox(

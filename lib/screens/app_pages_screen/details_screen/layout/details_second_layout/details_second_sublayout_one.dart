@@ -19,7 +19,7 @@ class DetailsSubLayoutOne extends StatelessWidget {
         DetailsSecondSubLayoutOne(
             price: variant.discountedPrice, inStock: inStock),
         const VSpace(Sizes.s15),
-        if (currentProduct.options!.isNotEmpty) ...[
+        if (currentProduct.options != null && currentProduct.options!.isNotEmpty) ...[
           _buildSelectionWrap(
             context: context,
             items: appArray.detailsData,
